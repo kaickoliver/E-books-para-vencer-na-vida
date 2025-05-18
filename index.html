@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Ebooks | Kaick</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffcc70, #ff9472);
+      color: #333;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* BACKGROUND OVERLAY COM AS IMAGENS */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top left;
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body::after {
+      background-image: url(imj/WhatsApp\ Image\ 2025-05-18\ at\ 13.01.48.jpeg);
+    }
+
+    body::before {
+      background-image: url(imj/WhatsApp\ Image\ 2025-05-18\ at\ 13.02.21.jpeg);
+      background-position: bottom right;
+    }
+
+    header, .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    .ebook {
+      background: linear-gradient(145deg, #ffeaa7, #fab1a0);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .ebook:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .ebook img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .ebook h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #d35400;
+    }
+    .ebook p {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button, .whatsapp {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: background 0.3s;
+    }
+    button {
+      background: #00b894;
+      color: white;
+    }
+    button:hover {
+      background: #019875;
+    }
+    .whatsapp {
+      background: #0984e3;
+      color: white;
+      display: inline-block;
+    }
+    .whatsapp:hover {
+      background: #0868c7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Ebooks que Transformam</h1>
+    <p>Aprenda, invista e lucre — receba no WhatsApp após o Pix!</p>
+  </header>
+
+  <div class="container">
+    <div class="ebook">
+      <img src="https://via.placeholder.com/400x220/FFB347/000000?text=Investimento" alt="Ebook Investimento">
+      <h2>Como usar seu dinheiro e fazer o investimento certo</h2>
+      <p>Descubra como organizar sua vida financeira e investir com inteligência. Valor: <strong>R$9,90</strong></p>
+      <div class="buttons">
+        <button onclick="copiarPix()">Copiar chave Pix</button>
+        <a class="whatsapp" href="https://wa.me/5589981031489?text=Olá,+fiz+o+Pix+do+ebook+de+investimento,+segue+comprovante!" target="_blank">Enviar comprovante</a>
+      </div>
+    </div>
+
+    <div class="ebook">
+      <img src="https://via.placeholder.com/400x220/FF7F50/000000?text=Tigrinho" alt="Ebook Tigrinho">
+      <h2>Como acertar no Tigrinho e ganhar muito dinheiro</h2>
+      <p>Aprenda estratégias para jogar com mais responsabilidade e potencial de lucro. Valor: <strong>R$9,90</strong></p>
+      <div class="buttons">
+        <button onclick="copiarPix()">Copiar chave Pix</button>
+        <a class="whatsapp" href="https://wa.me/5589981031489?text=Olá,+fiz+o+Pix+do+ebook+do+Tigrinho,+segue+comprovante!" target="_blank">Enviar comprovante</a>
+      </div>
+    </div>
+
+    <div class="ebook">
+      <img src="https://via.placeholder.com/400x220/FFD700/000000?text=Combo+2+Ebooks" alt="Combo Ebooks">
+      <h2>🔥 Combo dos 2 eBooks</h2>
+      <p>Leve os dois guias por um preço especial. Valor: <strong>R$14,90</strong></p>
+      <div class="buttons">
+        <button onclick="copiarPix()">Copiar chave Pix</button>
+        <a class="whatsapp" href="https://wa.me/5589981031489?text=Olá,+fiz+o+Pix+do+combo+de+ebooks,+segue+comprovante!" target="_blank">Enviar comprovante</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const chave = "89981031489";
+      navigator.clipboard.writeText(chave).then(() => {
+        alert("Chave Pix copiada: " + chave);
+      }).catch(err => {
+        alert("Erro ao copiar Pix");
+      });
+    }
+  </script>
+</body>
+</html>
